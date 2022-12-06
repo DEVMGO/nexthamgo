@@ -1,0 +1,43 @@
+#swiperSlide .swiper-button-next {
+    content: '';
+    background-image: url("../public/assets/icons/left.svg") !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: -1rem;
+    z-index: 9999999999;
+}
+
+.swiper-button-next::after {
+    content: '' !important;
+}
+
+#swiperSlide .swiper-button-prev {
+    content: '';
+    background-image: url("../public/assets/icons/right.svg") !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    right: auto !important;
+    left: clamp(3rem, 4vw, 4rem) !important;
+    top: -1rem;
+}
+
+@media (max-width: 450px) {
+    #swiperSlide .swiper-button-prev,
+    #swiperSlide .swiper-button-next {
+        top: -2rem;
+    }
+}
+
+#swiperSlide .swiper-button-prev::after {
+    content: '' !important;
+}
+
+#swiperSlide .swiper {
+    overflow: visible;
+}
+
+#swiperSlide .swiper-slide {
+    padding: 0!important;
+}

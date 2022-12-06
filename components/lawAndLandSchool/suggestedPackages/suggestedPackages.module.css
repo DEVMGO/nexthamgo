@@ -1,0 +1,233 @@
+.suggested {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.suggested .suggest_box {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.suggested .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.suggested .header .title {
+    color: #333;
+    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.suggested .header .title p {
+    width: clamp(4rem, 8vw, 8rem);
+    height: 1rem;
+    border-top: 2px solid #1d77d7;
+    margin: 1rem .5rem 0;
+}
+.suggested .header .title p:nth-child(2) {
+    width: clamp(2rem, 4vw, 4rem);
+    height: 1rem;
+    border-top: 2px solid #1d77d7;
+    margin: 1rem .5rem 0;
+}
+.suggested .header .title p:nth-child(1) {
+    margin-right: 1.5rem;
+}
+
+.suggested .sliderBox {
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: .8rem;
+}
+
+.suggested .sliderBox .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+
+.suggested .sliderBox .header button {
+    margin-left: clamp(8rem, 10vw, 10rem);
+    color: #007aff;
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+    transition: all .3s;
+}
+
+.suggested .sliderBox .header button:hover {
+    color: #113e6e;
+}
+
+
+@media (max-width: 600px) {
+    .suggested .suggest_box {
+        width: 90%;
+    }
+    .suggested .sliderBox .header {
+        padding: 1.5rem 0;
+    }
+}
+
+.cardSuggest {
+    width: 100%;
+    /* height: 25rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardSuggest h3 {
+    color: #444;
+    font-weight: 100;
+    font-size: clamp(.7rem, .9vw, .9rem);
+    margin: 2rem 1rem;
+    text-align: justify;
+}
+
+.cardSuggest .data {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cardSuggest .data h5 {
+    color: #999;
+    font-weight: 100;
+    font-size: clamp(.5rem, .8vw, .8rem);
+    display: flex;
+    align-items: center;
+    margin: .25rem .5rem;
+}
+.cardSuggest .data h5 svg {
+    font-size: clamp(.9rem, 1.1vw, 1.1rem);
+    margin-left: .4rem;
+}
+
+.cardSuggest .priceBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .8rem;
+}
+
+.cardSuggest .priceBox .prices {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem .8rem;
+}
+
+.cardSuggest .priceBox .prices p {
+    color: #555;
+    font-weight: 100;
+    font-size: clamp(.7rem, 1vw, 1rem);
+}
+
+.cardSuggest .priceBox .prices del {
+    color: #555;
+    font-weight: 100;
+    font-size: clamp(.6rem, .8vw, .8rem);
+}
+
+.cardSuggest .priceBox button {
+    color: #fff;
+    background: #128391;
+    font-weight: 100;
+    font-size: clamp(.8rem, 1vw, 1rem);
+    padding: .4rem 1rem;
+    border-radius: .7rem;
+    margin: 0 0 0 .4rem;
+    transition: transform .3s ease;
+    position: relative;
+    z-index: 5;
+}
+
+.cardSuggest .priceBox button::before,
+.cardSuggest .priceBox button::after {
+    background: #128291b3;
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .7rem;
+    z-index: -1;
+    transition: transform .3s ease;
+}
+.cardSuggest .priceBox button:hover {
+    cursor: pointer;
+    transform: translate(-8px, -8px);
+}
+.cardSuggest .priceBox button:hover::after {
+    transform: translate(4px, 4px);
+}
+.cardSuggest .priceBox button:hover::before {
+    transform: translate(8px, 8px);
+}
+
+.cardSuggest:nth-child(2) .priceBox button {
+    color: #fff;
+    background: #3bbdc6;
+}
+.cardSuggest:nth-child(3) .priceBox button {
+    color: #fff;
+    background: #d81159;
+}
+.cardSuggest:nth-child(4) .priceBox button {
+    color: #fff;
+    background: #ffce1f;
+}
+
+.cardSuggest .footercard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .7rem 3rem .7rem 0;
+    margin: 1rem 0 -.5rem 0;
+    background: #128391;
+    transform: rotate(-2deg);
+    position: relative;
+}
+.cardSuggest .footercard::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 8rem;
+    background: #1282918a;
+    top: 0;
+    left: -.5rem;
+    transform: rotate(4deg);
+}
+
+.cardSuggest .footercard h4 {
+    color: #fff;
+    font-weight: 100;
+    font-size: clamp(.7rem, .9vw, .9rem);
+    margin: 0;
+    transform: rotate(5deg);
+}

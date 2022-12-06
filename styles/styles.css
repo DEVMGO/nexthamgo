@@ -11,7 +11,7 @@
     text-align: center;
     font-size: 18px;
     background: #fff;
-    height: 70vh;
+    height: 90vh;
   
     /* Center slide text vertically */
     display: -webkit-box;
@@ -58,7 +58,7 @@
   }
   
   .mySwiper {
-    height: 90vh;
+    height: 65vh;
     box-sizing: border-box;
     padding: 10px 0;
   }
@@ -131,7 +131,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding: 0 clamp(2rem, 8vw, 8rem);
 }
 .img_box {
   position: absolute;
@@ -168,6 +169,7 @@
   text-align: right;
   font-size: clamp(.9rem, 1.5vw, 1.5rem);
   margin: 0 0 1.5rem 0;
+  text-shadow: 3px 1px 7px rgba(255, 255, 255, .4);
 }
 
 .data_box .btn_box {
