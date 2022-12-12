@@ -94,14 +94,14 @@ const Courses = () => {
   ]
   return (
     <div className='w-full flex items-center justify-start flex-col'>
-      <div className='relative w-full h-[35vh] res4:h-[15vh] flex items-center justify-center flex-col overflow-hidden'>
+      {/* <div className='relative w-full h-[35vh] res4:h-[15vh] flex items-center justify-center flex-col overflow-hidden'>
         <Image src={Slide} alt='مجموعه حقوقی همگو' className='w-full h-full object-cover' />
         <div className='absolute right-0 w-full flex items-start justify-center flex-col bg-gradient-to-r from-[rgba(54,100,148,.5)] via-[rgba(4,128,212,.5)] to-[rgba(39,178,188,.5)] shadow-md p-12 res3:p-5'>
           <h1 className='text-white text-xl'>مجموعه حقوقی همگو</h1>
         </div>
-      </div>
+      </div> */}
       
-      <div className='relative -mt-24 w-11/12 grid grid-cols-20 gap-3 items-start justify-center mb-8 p-16'>
+      <div className='relative w-11/12 grid grid-cols-20 res4:grid-cols-18 gap-3 items-start justify-center mb-8 p-16 res4:p-4'>
         {Items.map((item, index) => (
           <CardCourse key={index + "courses"} title={item.title} image={item.image} description={item.description} />
         ))}

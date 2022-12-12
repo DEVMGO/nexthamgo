@@ -74,7 +74,7 @@ const Navbar = () => {
     ]
 
   return (
-    <div className='relative w-full bg-blueHamgo flex items-stretch justify-between px-8 res4:px-4 h-20 bg-gradient-to-r from-[rgba(16,46,70,1)] via-[rgba(22,105,122,1)] to-[rgba(16,46,70,1)]'>
+    <div className='relative w-full bg-blueHamgo flex items-stretch justify-between px-8 res4:px-4 h-20 bg-gradient-to-r from-[rgba(16,46,70,1)] via-[rgba(22,105,122,1)] to-[rgba(16,46,70,1)] z-50'>
         <div className='flex items-center justify-start'>
             <button onClick={() => setShowMenu(!showMenu)} className='hidden res5:flex text-white text-3xl ml-2 transition-all duration-500'>
                 {showMenu ? <MdOutlineClose /> : <HiMenu />}

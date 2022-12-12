@@ -1,6 +1,7 @@
 import '../styles/globals.css'
-import '../styles/styles.css'
+// import '../styles/styles.css'
 import '../styles/stylesSlider.css'
+import '../styles/Home.css'
 
 // Layouts
 import HomeLayout from '../components/layouts/homeLayout';

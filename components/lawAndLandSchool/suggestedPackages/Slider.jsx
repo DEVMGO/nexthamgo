@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 // import "./styles.css";
 
 // import required modules
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 // Images
 import Image from "../../../public/assets/imgs/img1.jpg";
@@ -28,6 +28,10 @@ export default function Slider({ SuggestList }) {
         // pagination={{
         //   clickable: true,
         // }}
+        autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+        }}
         navigation={true}
         breakpoints={{
           300: {
@@ -47,7 +51,7 @@ export default function Slider({ SuggestList }) {
             spaceBetween: 20,
           },
         }}
-        modules={[Navigation]}
+        modules={[Autoplay, Navigation]}
         className="mySwiper"
       >
         {SuggestList.map((item, index) => (

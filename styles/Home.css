@@ -1,0 +1,242 @@
+#homeSlider {
+  width: 100%;
+  min-height: 100vh !important;
+}
+
+#homeSlider .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#homeSlider .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 90vh;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+#homeSlider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* body {
+  background: #000;
+  color: #000;
+}
+ */
+#homeSlider .swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#homeSlider .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+#homeSlider .mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+#homeSlider .mySwiper {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#homeSlider .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 1;
+}
+
+#homeSlider .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+#homeSlider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#homeSlider .swiper-horizontal>.swiper-pagination-bullets, 
+#homeSlider .swiper-pagination-bullets.swiper-pagination-horizontal, 
+#homeSlider .swiper-pagination-custom, 
+#homeSlider .swiper-pagination-fraction {
+bottom: 10px;
+left: 0;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+#homeSlider .swiper-pagination-bullet, 
+#homeSlider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
+width: 20%;
+height: 7rem;
+border-radius: 0;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#homeSlider .swiper-pagination-bullet {
+background: #fff !important;
+}
+
+#homeSlider .swiper-pagination-bullet-active {
+background: #16697a !important;
+}
+
+#homeSlider .swiper-pagination-bullet-active h3 {
+opacity: 1;
+font-size: clamp(.5rem, 1.3vw, 1.3rem);
+color: #fff !important;
+}
+
+#homeSlider #dot {
+opacity: 1;
+}
+#homeSlider .swiper-pagination-bullet h3 {
+opacity: 1;
+font-size: clamp(.5rem, 1.3vw, 1.3rem);
+color: #333;
+}
+
+#homeSlider .swiper-slide {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding: 0 clamp(2rem, 8vw, 8rem);
+}
+#homeSlider .img_box {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+right: 0;
+z-index: 1;
+}
+#homeSlider .img_box::before {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+right: 0;
+content: '';
+background: rgba(0,0,0,.3);
+}
+
+#homeSlider .data_box {
+width: 100%;
+max-width: 750px;
+min-width: 280px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+z-index: 5;
+padding: 1.5rem;
+}
+
+#homeSlider .data_box h2 {
+color: #fff;
+text-align: right;
+font-size: clamp(.9rem, 1.5vw, 1.5rem);
+margin: 0 0 1.5rem 0;
+text-shadow: 3px 1px 7px rgba(255, 255, 255, .4);
+}
+
+#homeSlider .data_box .btn_box {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+}
+#homeSlider .data_box .btn_box p {
+color: #fff;
+text-align: right;
+margin: 1rem 0;
+font-size: clamp(.8rem, 1.1vw, 1.1rem);
+}
+
+#homeSlider .data_box .btn_box button {
+color: #fff;
+background: #ffa62b;
+border: none;
+outline: none;
+padding: .4rem 3rem;
+font-size: clamp(.8rem, 1.1vw, 1.1rem);
+border-radius: .5rem;
+transition: all .2s linear;
+}
+#homeSlider .data_box .btn_box button:hover {
+cursor: pointer;
+background: #ff9500;
+}
+
+
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.box_counter {
+  counter-reset: num var(--tonum);
+  font: 800 40px system-ui;
+  margin-top: 200px;
+  padding: 2rem;
+}
+.box_counter::after {
+  content: counter(num);
+}
+
+.zero {
+  counter-reset: num var(--num);
+}
+.animate {
+  animation: counter 5s forwards ease-out 0.5s;
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: var(--tonum);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .box_counter {
+    animation: none !important;
+  }
+}

@@ -17,6 +17,11 @@ module.exports = {
         courseBlue2: '#3bbdc6',
         courseRed: '#d81159',
         courseYellow: '#ffce1f',
+        black33: '#333',
+        black44: '#444',
+        black66: '#666',
+        black99: '#999',
+        bgDataHamgo: 'rgba(255, 255, 255, 0.126)',
       },
       screens: {
         res1: "1410px",
@@ -38,6 +43,12 @@ module.exports = {
         20: "repeat(auto-fit, minmax(270px, 1fr))",
         21: "repeat(auto-fit, minmax(280px, 1fr))",
       },
+      borderRadius: {
+        bgCours1: '70% 30% 44% 56% / 41% 44% 56% 59%',
+        bgCours2: '71% 29% 36% 64% / 47% 49% 51% 53%',
+        bgCours3: '40% 60% 67% 33% / 47% 36% 64% 53%',
+        bgCours4: '30% 70% 67% 33% / 30% 30% 70% 70%',
+      }
     },
   },
   plugins: [],

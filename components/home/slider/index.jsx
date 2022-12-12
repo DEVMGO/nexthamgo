@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,7 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// import "./styles.css";
 
 // Images
 import img1 from '../../../public/assets/imgs/img1.jpg'
@@ -18,7 +18,6 @@ import img4 from '../../../public/assets/imgs/img4.jpg'
 
 // import required modules
 import { Autoplay, Pagination } from "swiper";
-import Image from "next/image";
 
 export default function Slider() {
 
@@ -73,33 +72,35 @@ export default function Slider() {
 
   return (
     <>
-      <Swiper 
-        pagination={pagination}
-        loop={true}
-        autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-        }}
-        modules={[Autoplay, Pagination]} 
-        className="mySwiper" 
-      >
-        {slides.map((item, index) => (
-            <SwiperSlide key={index + "slider"}>
-                <div className="img_box">
-                    <Image src={item.img} alt={item.slide_title} />
-                </div>
-                <div className="data_box">
-                    <h2>{item.slide_title}</h2>
-                    <div className="btn_box">
-                        <p>{item.desc}</p>
-                        <Link href={`/${item.url}`}>
-                          <button>ادامه</button>
-                        </Link>
-                    </div>
-                </div>
-            </SwiperSlide>
-        ))}
-      </Swiper>
+      <div id="homeSlider">
+        <Swiper 
+          pagination={pagination}
+          loop={true}
+          autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Pagination]} 
+          className="mySwiper" 
+        >
+          {slides.map((item, index) => (
+              <SwiperSlide key={index + "slider"}>
+                  <div className="img_box">
+                      <Image src={item.img} alt={item.slide_title} />
+                  </div>
+                  <div className="data_box">
+                      <h2>{item.slide_title}</h2>
+                      <div className="btn_box">
+                          <p>{item.desc}</p>
+                          <Link href={`/${item.url}`}>
+                            <button>ادامه</button>
+                          </Link>
+                      </div>
+                  </div>
+              </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 }

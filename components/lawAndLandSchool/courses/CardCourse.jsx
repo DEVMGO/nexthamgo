@@ -5,7 +5,7 @@ import style from './courses.module.css'
 
 const CardCourse = ({ title, image, description }) => {
   return (
-    <div className={`w-full h-[20rem] flex items-center justify-between flex-col rounded-2xl overflow-hidden shadow-md bg-white ${style.card_course}`}>
+    <div className={`w-full h-auto flex items-center justify-between flex-col rounded-2xl overflow-hidden shadow-md bg-white ${style.card_course}`}>
       <div className='w-full flex items-center justify-start flex-col'>
         <div className={`${style.title}`}>
           <h3 className='text-white text-xl'>{title}</h3>
