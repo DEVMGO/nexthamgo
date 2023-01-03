@@ -1,0 +1,52 @@
+.boxImage {
+    position: relative;
+    margin: .5rem 0;
+    z-index: 30;
+}
+
+.boxImage::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+    background-image: url('../../../public/assets/imgs/onlinecourses/ciecles-1.png');
+    background-repeat: no-repeat;
+}
+.boxImage:nth-child(1) {
+    width: 300px;
+    height: 180px;
+    z-index: 30;
+}
+.boxImage:nth-child(1)::before {
+    top: -40px;
+    right: -40px;
+}
+.boxImage:nth-child(2) {
+    width: 400px;
+    height: 200px;
+    transform: translateX(200px);
+    z-index: 30;
+}
+.boxImage:nth-child(2)::before {
+    top: -20px;
+    left: -60px;
+    height: 180px;
+    z-index: -2;
+    background-image: url('../../../public/assets/imgs/onlinecourses/circles-2.png');
+}
+.boxImage:nth-child(3) {
+    width: 370px;
+    height: 250px;
+}
+.boxImage:nth-child(3)::before {
+    top: -20px;
+    right: -50px;
+    height: 180px;
+    background-image: url('../../../public/assets/imgs/onlinecourses/circles-3.png');
+    z-index: -2;
+}
+
+/* @media screen(max-width: 1300px) {
+    
+} */

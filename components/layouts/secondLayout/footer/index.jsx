@@ -11,7 +11,7 @@ import { FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
 
 const Footer = ({ phone, website, location, platfourms, phones }) => {
   return (
-    <div className='w-full min-h-[50vh] bg-blueHamgo flex items-start justify-evenly p-8 flex-col bg-gradient-to-r from-[rgba(16,46,70,1)] via-[rgba(22,105,122,1)] to-[rgba(16,46,70,1)]'>
+    <div className='w-full min-h-[50vh] bg-blueHamgo flex items-start justify-evenly p-8 flex-col bg-gradient-to-r from-[rgba(16,46,70,1)] via-[rgba(22,105,122,1)] to-[rgba(16,46,70,1)] z-50'>
       <div className='w-full flex items-start justify-evenly res6:items-center res6:flex-col'>
         <div className='w-full res7:hidden'><HamgoCollection phones={phones} /></div>
         <ContactUs phone={phone} location={location} website={website} />

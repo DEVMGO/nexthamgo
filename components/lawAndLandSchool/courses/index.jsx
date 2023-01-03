@@ -19,6 +19,7 @@ const Courses = () => {
     {
       title: "دوره‌های آنلاین",
       image: Online,
+      url: '/onlinecourses',
       description: [
         {
           title: "دهمین کارگاه جامع پرورش مشاور حقوقی"
@@ -34,6 +35,7 @@ const Courses = () => {
     {
       title: "دوره‌های حضوری",
       image: Attend,
+      url: '',
       description: [
         {
           title: "تک جلسه پرونده‌‏خوانی"
@@ -52,6 +54,7 @@ const Courses = () => {
     {
       title: "دوره‌های آفلاین",
       image: Offline,
+      url: '/offlinecourses',
       description: [
         {
           title: "فیلم اصول قراردادنویسی"
@@ -73,6 +76,7 @@ const Courses = () => {
     {
       title: "کتب کاربردی",
       image: Books,
+      url: '',
       description: [
         {
           title: "آنچه مشاور حقوقی باید بداند"
@@ -103,7 +107,13 @@ const Courses = () => {
       
       <div className='relative w-11/12 grid grid-cols-20 res4:grid-cols-18 gap-3 items-start justify-center mb-8 p-16 res4:p-4'>
         {Items.map((item, index) => (
-          <CardCourse key={index + "courses"} title={item.title} image={item.image} description={item.description} />
+          <CardCourse 
+            key={index + "courses"} 
+            title={item.title} 
+            image={item.image} 
+            url={item.url}
+            description={item.description} 
+          />
         ))}
       </div>
 

@@ -23,6 +23,11 @@ module.exports = {
         black99: '#999',
         bgDataHamgo: 'rgba(255, 255, 255, 0.126)',
       },
+      backgroundImage: {
+        'ciecles': "url('/public/assets/imgs/onlinecourses/ciecles.svg')",
+        'ciecles2': "url('/public/assets/imgs/onlinecourses/ciecles.svg')",
+        'courses-data': "url('/public/assets/imgs/Vector4.png')",
+      },
       screens: {
         res1: "1410px",
         res2: "1230px",
